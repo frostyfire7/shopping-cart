@@ -1,0 +1,36 @@
+body {
+  background-color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+}
+
+.product {
+  margin-bottom: 20px;
+}
+
+#cart {
+  list-style: none;
+  padding: 0;
+}
+
+#cart .list-group-item {
+  border: none;
+}
+
+.add-to-cart {
+  width: 100%;
+}
+
+#promo-code {
+  width: 70%;
+}
+
+#discount {
+  display: none;
+}
+
+#cart-total {
+  font-weight: bold;
+}
