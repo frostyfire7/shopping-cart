@@ -22,14 +22,17 @@ const promo = [
   },
 ];
 
+// Event listener untuk memasukkan ke keranjang
 productButtons.forEach((button) => {
   button.addEventListener("click", addToCart);
 });
 
+// Event listener untuk memasukkan kode promo
 promoCodeInput.addEventListener("input", () => {
   updateTotal(cartItems.reduce((acc, item) => acc + item.price, 0));
 });
 
+// Fungsi untuk menambahkan ke keranjang
 function addToCart(event) {
   const button = event.target;
   const productName = button.getAttribute("data-name");
@@ -39,6 +42,7 @@ function addToCart(event) {
   displayCart();
 }
 
+// Fungsi untuk menampilkan yang ada di keranjang
 function displayCart() {
   cart.innerHTML = "";
   let subtotal = 0;
@@ -54,6 +58,7 @@ function displayCart() {
   updateTotal(subtotal);
 }
 
+// Fungsi untuk mengupdate harga subtotals
 function updateTotal(subtotal) {
   let total = subtotal;
   const promoCode = promoCodeInput.value;
